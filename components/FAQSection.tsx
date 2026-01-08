@@ -11,17 +11,17 @@ const categories = [
 const faqs = [
   {
     category: 'About Decide Together',
-    question: 'What is TogetherBuying?',
+    question: 'What is DecideTogether?',
     answer: 'decidetogther.in is India\'s premier group buying community for real estate. We help home buyers pool their purchasing power to negotiate institutional-level discounts from developers, making dream homes more affordable.'
   },
   {
     category: 'About Decide Together',
-    question: 'How does TogetherBuying work?',
+    question: 'How does DecideTogether work?',
     answer: 'We aggregate demand for specific residential projects. Once a group reaches its target size, our experts negotiate a bulk discount with the developer. Each member then purchases their individual unit at this discounted rate.'
   },
   {
     category: 'About Decide Together',
-    question: 'Why should I choose TogetherBuying over brokers or traditional channels?',
+    question: 'Why should I choose DecideTogether over brokers or traditional channels?',
     answer: 'Unlike traditional brokers who earn commissions from sales, we focus on the collective power of buyers. Our model allows you to unlock discounts (up to 20%) that are typically reserved for large-scale investors or institutional players.'
   }
 ];

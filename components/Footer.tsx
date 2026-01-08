@@ -1,8 +1,47 @@
 
 import React from 'react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onHomeClick?: () => void;
+  onPropertiesClick?: () => void;
+  onAboutClick?: () => void;
+  onContactClick?: () => void;
+  onArticlesClick?: () => void;
+  onCaseStudiesClick?: () => void;
+  onNewsClick?: () => void;
+  onFAQClick?: () => void;
+  onSignInClick?: () => void;
+}
+
+const Footer: React.FC<FooterProps> = ({
+  onHomeClick,
+  onPropertiesClick,
+  onAboutClick,
+  onContactClick,
+  onArticlesClick,
+  onCaseStudiesClick,
+  onNewsClick,
+  onFAQClick,
+  onSignInClick
+}) => {
   const currentYear = new Date().getFullYear();
+
+  const overviewLinks = [
+    { label: 'Home', onClick: onHomeClick },
+    { label: 'Properties', onClick: onPropertiesClick },
+    { label: 'Corporate', onClick: onAboutClick }, // Redirecting to About for now
+    { label: 'About us', onClick: onAboutClick },
+    { label: 'Contact us', onClick: onContactClick },
+  ];
+
+  const quickLinks = [
+    { label: 'Join Group', onClick: onSignInClick },
+    { label: 'Testimonials', onClick: onHomeClick }, // Live on Home page
+    { label: 'Articles', onClick: onArticlesClick },
+    { label: 'Case Studies', onClick: onCaseStudiesClick },
+    { label: 'News', onClick: onNewsClick },
+    { label: 'FAQs', onClick: onFAQClick },
+  ];
 
   return (
     <footer className="bg-white pt-24 pb-12 border-t border-gray-100">
@@ -11,10 +50,13 @@ const Footer: React.FC = () => {
           
           {/* Brand Column */}
           <div className="space-y-8">
-            <div className="flex items-center cursor-pointer group">
+            <div 
+              onClick={onHomeClick}
+              className="flex items-center cursor-pointer group"
+            >
               <img 
                 src="/logo.png" 
-                alt="decidetogther.in Logo" 
+                alt="TogetherBuying.in Logo" 
                 className="h-[84px] w-auto object-contain"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none';
@@ -36,11 +78,14 @@ const Footer: React.FC = () => {
           <div className="space-y-8">
             <h4 className="text-[19px] font-[800] text-[#1A1A1A] tracking-tight">Overview</h4>
             <ul className="space-y-5">
-              {['Home', 'Properties', 'Corporate', 'About us', 'Contact us'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-500 font-[600] text-[17px] hover:text-[#E66B4A] transition-colors">
-                    {item}
-                  </a>
+              {overviewLinks.map((item) => (
+                <li key={item.label}>
+                  <button 
+                    onClick={item.onClick}
+                    className="text-gray-500 font-[600] text-[17px] hover:text-[#E66B4A] transition-colors text-left"
+                  >
+                    {item.label}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -50,11 +95,14 @@ const Footer: React.FC = () => {
           <div className="space-y-8">
             <h4 className="text-[19px] font-[800] text-[#1A1A1A] tracking-tight">Quick Links</h4>
             <ul className="space-y-5">
-              {['Join Group', 'Testimonials', 'Articles', 'Case Studies', 'News', 'subscription'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-500 font-[600] text-[17px] hover:text-[#E66B4A] transition-colors">
-                    {item}
-                  </a>
+              {quickLinks.map((item) => (
+                <li key={item.label}>
+                  <button 
+                    onClick={item.onClick}
+                    className="text-gray-500 font-[600] text-[17px] hover:text-[#E66B4A] transition-colors text-left"
+                  >
+                    {item.label}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -71,8 +119,8 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-gray-400 text-[13px] font-bold uppercase tracking-wider">Email:</span>
-                <a href="mailto:hello@decidetogther.in" className="text-gray-800 font-[800] text-[17px] hover:text-[#E66B4A] transition-colors">
-                  hello@decidetogther.in
+                <a href="mailto:hello@togetherbuying.in" className="text-gray-800 font-[800] text-[17px] hover:text-[#E66B4A] transition-colors">
+                  hello@togetherbuying.in
                 </a>
               </div>
               <div className="flex flex-col gap-1">
@@ -94,7 +142,7 @@ const Footer: React.FC = () => {
         {/* Sub Footer */}
         <div className="pt-10 border-t border-gray-50 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col md:flex-row items-center gap-2 text-gray-400 font-bold text-[14px]">
-            <span>© {currentYear} Decide Together. All rights reserved.</span>
+            <span>© {currentYear} Together Buying. All rights reserved.</span>
             <span className="hidden md:inline">|</span>
             <span>A brand of My Housing Advisor Private Limited.</span>
             <span className="hidden md:inline">|</span>
