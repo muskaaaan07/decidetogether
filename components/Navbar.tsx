@@ -36,15 +36,15 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <nav className="sticky top-0 z-[60] bg-white/90 backdrop-blur-xl border-b border-gray-100/50">
       <div className="max-w-[1280px] mx-auto px-6 h-[84px] flex items-center justify-between">
-        {/* Logo Section - Replaced with Image */}
+        {/* Logo Section - Increased size */}
         <div 
           onClick={onHomeClick}
           className="flex items-center cursor-pointer group h-full"
         >
           <img 
             src="/logo.png" 
-            alt="decidetogether.in Logo" 
-            className="h-[54px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            alt="TogetherBuying.in Logo" 
+            className="h-[68px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
             onError={(e) => {
               // Fallback if image doesn't exist yet
               (e.target as HTMLImageElement).style.display = 'none';

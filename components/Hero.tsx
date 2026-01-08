@@ -9,7 +9,7 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
   return (
     <section className="max-w-[1320px] mx-auto px-6 pt-10 pb-16 relative">
       {/* Main Relative Container (No overflow-hidden here so badges can bleed) */}
-      <div className="relative min-h-[580px]">
+      <div className="relative min-h-[540px]">
         
         {/* Background & Content Wrapper (This handles the clipping of the image and pattern) */}
         <div className="absolute inset-0 bg-[#E66B4A] rounded-[56px] overflow-hidden hero-pattern shadow-2xl shadow-orange-100">
@@ -17,15 +17,12 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/5 to-transparent pointer-events-none"></div>
 
           {/* Hero Image - Clipped at bottom by the overflow-hidden parent */}
-          <div className="absolute right-0 bottom-0 w-[55%] h-full hidden lg:block pointer-events-none">
+          <div className="absolute right-0 bottom-0 w-[65%] h-full hidden lg:block pointer-events-none">
             <div className="relative w-full h-full flex items-end justify-end">
               <img 
-                src="/herosectionimg/building.png" 
+                src="/img.jpg" 
                 alt="Luxury Home" 
-                className="max-h-[115%] w-auto object-contain transform translate-y-12 translate-x-12 animate-float"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000';
-                }}
+                className="max-h-[120%] w-auto object-contain transform translate-y-0 translate-x-12"
               />
             </div>
           </div>

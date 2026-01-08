@@ -14,8 +14,8 @@ const Footer: React.FC = () => {
             <div className="flex items-center cursor-pointer group">
               <img 
                 src="/logo.png" 
-                alt="decidetogether.in Logo" 
-                className="h-[64px] w-auto object-contain"
+                alt="TogetherBuying.in Logo" 
+                className="h-[84px] w-auto object-contain"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none';
                   (e.target as HTMLImageElement).parentElement!.innerHTML = `
@@ -71,8 +71,8 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-gray-400 text-[13px] font-bold uppercase tracking-wider">Email:</span>
-                <a href="mailto:hello@decidetogether.in" className="text-gray-800 font-[800] text-[17px] hover:text-[#E66B4A] transition-colors">
-                  hello@decidetogether.in
+                <a href="mailto:hello@togetherbuying.in" className="text-gray-800 font-[800] text-[17px] hover:text-[#E66B4A] transition-colors">
+                  hello@togetherbuying.in
                 </a>
               </div>
               <div className="flex flex-col gap-1">
@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
         {/* Sub Footer */}
         <div className="pt-10 border-t border-gray-50 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col md:flex-row items-center gap-2 text-gray-400 font-bold text-[14px]">
-            <span>© {currentYear} Decide Together. All rights reserved.</span>
+            <span>© {currentYear} Together Buying. All rights reserved.</span>
             <span className="hidden md:inline">|</span>
             <span>A brand of My Housing Advisor Private Limited.</span>
             <span className="hidden md:inline">|</span>
