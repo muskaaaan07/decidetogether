@@ -1,0 +1,1 @@
+// This file has moved to pages/PropertiesPage.tsx. You can safely delete this file.
