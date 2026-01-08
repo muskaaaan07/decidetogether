@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({
         >
           <img 
             src="/logo.png" 
-            alt="TogetherBuying.in Logo" 
+            alt="decidetogther.in Logo" 
             className="h-[68px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
             onError={(e) => {
               // Fallback if image doesn't exist yet

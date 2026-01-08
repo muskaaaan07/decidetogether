@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const categories = [
-  'About Together Buying',
+  'About Decide Together',
   'Joining a Group & Key Benefits',
   'Membership & Subscription Fees',
   'Our Clients & Success Stories'
@@ -10,17 +10,17 @@ const categories = [
 
 const faqs = [
   {
-    category: 'About Together Buying',
+    category: 'About Decide Together',
     question: 'What is TogetherBuying?',
-    answer: 'TogetherBuying.in is India\'s premier group buying community for real estate. We help home buyers pool their purchasing power to negotiate institutional-level discounts from developers, making dream homes more affordable.'
+    answer: 'decidetogther.in is India\'s premier group buying community for real estate. We help home buyers pool their purchasing power to negotiate institutional-level discounts from developers, making dream homes more affordable.'
   },
   {
-    category: 'About Together Buying',
+    category: 'About Decide Together',
     question: 'How does TogetherBuying work?',
     answer: 'We aggregate demand for specific residential projects. Once a group reaches its target size, our experts negotiate a bulk discount with the developer. Each member then purchases their individual unit at this discounted rate.'
   },
   {
-    category: 'About Together Buying',
+    category: 'About Decide Together',
     question: 'Why should I choose TogetherBuying over brokers or traditional channels?',
     answer: 'Unlike traditional brokers who earn commissions from sales, we focus on the collective power of buyers. Our model allows you to unlock discounts (up to 20%) that are typically reserved for large-scale investors or institutional players.'
   }
@@ -49,13 +49,13 @@ const FAQSection: React.FC = () => {
         <div className="max-w-[500px]">
           <h3 className="text-[#E66B4A] text-[42px] font-[900] tracking-tight mb-4 uppercase">FAQS</h3>
           <p className="text-[#1A1A1A]/80 text-[19px] font-medium leading-relaxed">
-            Get answers to some commonly asked questions about Together Buying platform and our business.
+            Get answers to some commonly asked questions about Decide Together platform and our business.
           </p>
         </div>
         <div className="mt-8 md:mt-0 flex items-center opacity-90">
           <img 
             src="/logo.png" 
-            alt="TogetherBuying.in Logo" 
+            alt="decidetogther.in Logo" 
             className="h-[84px] w-auto object-contain"
             onError={(e) => {
               (e.target as HTMLImageElement).style.display = 'none';
@@ -87,7 +87,7 @@ const FAQSection: React.FC = () => {
                     : 'text-gray-500 hover:bg-gray-50'
                 }`}
               >
-                {cat === 'About Together Buying' && (
+                {cat === 'About Decide Together' && (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M3 9.5L12 3L21 9.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.5z" />
                     <polyline points="9 22 9 12 15 12 15 22" />

@@ -38,7 +38,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onGetInTouch }) => {
           {/* Left Content Column */}
           <div className="w-full lg:w-[55%]">
             <h1 className="text-white text-[72px] font-[800] leading-[1.05] mb-8 tracking-tighter">
-              About Together<br />Buying
+              About Decide<br />Together
             </h1>
             
             <p className="text-white/95 text-[22px] font-[500] leading-[1.5] mb-12 max-w-[580px]">
